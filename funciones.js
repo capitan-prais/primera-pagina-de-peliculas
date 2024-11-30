@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		numVisible: 20,
 		// esto es para poner los indicadores de la ruleta
 		indicators: true,
+	
 		// para que se cierre la ruleta con true y se repita con false
 		noWrap: false
 		
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}); 
 })
 
-//menu
+//activa o cierra el menu lateral al achicar la pagina
 	const menu = document.querySelector('.menu');
 	const btn = document.querySelector('.menu-btn');
 
