@@ -430,23 +430,24 @@ h4 {
 
 @media screen and (max-width: 1150px){
   .container{
-    height: 496px;
+    height: 520px;
   }
   .row{
-    height: 490px;
+    margin: 0px;
+    height: 520px;
   }
   .col{
-    height: 495px;
+    height: 520px;
   }
   .row .col {
     padding: 0px;
   }
   .carousel{
-    height: 490px;
+    height: 520px;
   }
   .carousel .carousel-item{
     width: 330px;
-    height: 480px;
+    height: 520px;
   }
 
 }
@@ -555,14 +556,14 @@ h4 {
   }
 
   .titulodepelicula{
-    width: 285px;
+    width: 270px;
     height: 100px;
     margin: 370px 30px 30px 30px;
   }
 
   .carousel .carousel-item img{
     width: 330px;
-    height: 492px;
+    height: 522px;
     margin: 80px 0px 0px 0px;
   }
 
