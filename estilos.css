@@ -230,7 +230,7 @@ h4 {
 
   /*separacion entre botnes del menu*/
   .menu-i{
-    margin: 10px;
+    margin: 10px 0px 20px 20px;
   }
 
   .menu.active {
@@ -317,6 +317,12 @@ h4 {
   /* background: #000; */
 }
 
+@media screen and (max-width: 1150px){
+  .hero {
+    scroll-margin-top: 92px;
+  }
+}
+
 /* button:active {
 
   transform: scale(3);
@@ -346,6 +352,7 @@ h4 {
   text-align: center; 
   border-radius: 20px;
   background: #161f26db;
+  box-shadow: inset 0px -20px 19px -5px rgba(0,0,0,1); /*pone sombra interna en la parte de abajo*/
   /* max-width: 90%; */
   /*margin: auto;*/
   /*overflow: hidden;*/
@@ -358,6 +365,17 @@ h4 {
   animation-range: entry 0 cover 40%;
 }
 
+.todo:hover{
+  box-shadow: inset 0px -20px 19px -5px #fff;
+}
+
+@media screen and (max-width: 1150px){
+  .todo {
+    height: 100%;
+    margin: 25px auto;
+  }
+}
+
 /* titulo del genero de la pelicula del carrusel*/
 
 .titulo {
@@ -368,6 +386,7 @@ h4 {
   text-align: center; /*centra el texto*/
   font-family: 'DRagonlord'; /*estilo de letra*/
   color: #fff; /*color de texto*/
+  justify-content: center;
   /* min-height: 10px; */
   /* background: #161f26db; */
   /*height: px;*/
@@ -378,9 +397,22 @@ h4 {
   background: #000;
   border-radius: 80px 0px 80px 0px;
   box-shadow: 0px 10px 16px -10px #fff;
-  
-  
 }
+
+@media screen and (max-width: 1150px){
+  .titulo{
+    width: 65%;
+    height: 13%;
+    padding: 5px 0px 0px 0px;
+    /* text-align: center;
+    justify-content: center; */
+
+    /* float: none; */
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+}
+
 
 /*aqui estan todas las imagenes del carrusel*/ 
 
@@ -393,8 +425,32 @@ h4 {
   /* padding: 0px auto;
   margin: 0px auto;  */
   /* background: #000; */
-  box-shadow: inset 0px -20px 19px -5px rgba(0,0,0,1); /*pone sombra interna en la parte de abajo*/
+  
 }
+
+@media screen and (max-width: 1150px){
+  .container{
+    height: 496px;
+  }
+  .row{
+    height: 490px;
+  }
+  .col{
+    height: 495px;
+  }
+  .row .col {
+    padding: 0px;
+  }
+  .carousel{
+    height: 490px;
+  }
+  .carousel .carousel-item{
+    width: 330px;
+    height: 480px;
+  }
+
+}
+
 
 
 .carousel .carousel-item img{
@@ -470,6 +526,8 @@ h4 {
   transition: .5s ease;
   font-weight: bold;
 }
+
+
  
 
 .carousel .indicators .indicator-item {
@@ -486,11 +544,28 @@ h4 {
   .carousel .indicators .indicator-item {
     width: 5px; /*ancho*/
     height: 5px; /*alto*/
-    margin: 50px 5px 0px 20px;
+    margin: 10px 5px 0px 20px;
     /* border-radius: 10%; */
     background: red;
     transform: rotate(50deg); /*para girar en grado en este los puntitos del carousel*/
   }
+  .indicators {
+    margin-top: 50px;
+    /* background: #000; */
+  }
+
+  .titulodepelicula{
+    width: 285px;
+    height: 100px;
+    margin: 370px 30px 30px 30px;
+  }
+
+  .carousel .carousel-item img{
+    width: 330px;
+    height: 492px;
+    margin: 80px 0px 0px 0px;
+  }
+
 }
 
 .n{
