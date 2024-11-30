@@ -511,7 +511,7 @@ h4 {
 
 .imagenpeli:hover {
   filter: drop-shadow(0 -6mm 4mm hwb(0 97% 3%));/*esto es para poner sombra a las imagenes PNG*/
-  box-shadow: inset 0px -100px 6px 0px #fff; /*pone sombra interna en la parte de abajo*/
+  /* box-shadow: inset 0px -100px 6px 0px #fff; pone sombra interna en la parte de abajo */
 }
 
 
@@ -559,12 +559,15 @@ h4 {
     width: 270px;
     height: 100px;
     margin: 370px 30px 30px 30px;
+    opacity: 1;
   }
 
   .carousel .carousel-item img{
     width: 330px;
     height: 522px;
     margin: 80px 0px 0px 0px;
+    border-radius: 0px 0px 20px 20px;
+    filter: drop-shadow(0 -6mm 4mm hwb(0 97% 3%));
   }
 
 }
