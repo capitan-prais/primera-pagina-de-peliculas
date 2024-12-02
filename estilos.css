@@ -223,7 +223,7 @@ h4 {
     flex-direction: column;
     line-height: 40px;
     transition: all 0.5s ease;
-    transform: translateX(-100%); 
+    transform: translateX(250%); 
     /* text-align: center; */
     /* align-items: center; */
   }
@@ -234,7 +234,7 @@ h4 {
   }
 
   .menu.active {
-    transform: translateX(0); /*para activar nuestro menu lateral*/
+    transform: translateX(150%); /*para activar nuestro menu lateral*/
   }
 
 }
@@ -365,7 +365,7 @@ h4 {
   animation-range: entry 0 cover 40%;
 }
 
-.todo:hover{
+.todo:active{
   box-shadow: inset 0px -20px 19px -5px #fff;
 }
 
@@ -444,7 +444,7 @@ h4 {
   /* background: #000; */
 }
 
-.carousel .carousel-item img:hover{
+.carousel .carousel-item img:active{
  transform: scale(1.1); /*agrandar la imagen y que se posicione en el centro*/
 }
 

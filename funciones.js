@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnAnterior.innerHTML = '<i class="material-icons">&#10094;</i>';  // Icono de anterior (flecha izquierda)
 
         // Agregar los botones al contenedor de cada carousel
-        const carouselContainer = carousel.closest('.carousel-container');
+        const carouselContainer = carousel.closest('.hero');
         carouselContainer.appendChild(btnSiguiente);
         carouselContainer.appendChild(btnAnterior);
 
