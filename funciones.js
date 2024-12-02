@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const opcionesCarousel = {
         duration: 200,         // Duración de la animación
         dist: 1,               // Distancia entre los elementos
-        shift: 100,             // velocidad de Desplazamiento de los elementos
+        shift: 50,             // velocidad de Desplazamiento de los elementos
         padding: 10,          // Espaciado del contenido
         numVisible: 20,        // Número de elementos visibles
         indicators: true,      // Mostrar indicadores
-        noWrap: true          // Hacer que el carousel se repita
+        noWrap: false          // Hacer que el carousel se repita
     };
 
     // Inicializar los carouseles con las opciones definidas
