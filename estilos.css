@@ -414,34 +414,8 @@ h4 {
 }
 
 
-/*aqui estan todas las imagenes del carrusel*/ 
-
-.container {
-  width: 100%; /*ancho*/
-  height: 444px;
-  border-radius: 20px;
-  position: absolute;
-  /* margin: 0px auto; */
-  /* padding: 0px auto;
-  margin: 0px auto;  */
-  /* background: #000; */
-  
-}
-
 @media screen and (max-width: 1150px){
-  .container{
-    height: 520px;
-  }
-  .row{
-    margin: 0px;
-    height: 520px;
-  }
-  .col{
-    height: 520px;
-  }
-  .row .col {
-    padding: 0px;
-  }
+
   .carousel{
     height: 520px;
   }
@@ -474,19 +448,74 @@ h4 {
  transform: scale(1.1); /*agrandar la imagen y que se posicione en el centro*/
 }
 
-
-.carousel-item {
-  /* width: 250px; ancho */
-  /* height: 280px; alto */
-  position: relative;  /*pone todo lo que esta dentro una encima de la otra*/
- /* object-fit: cover;*/ /*sirve para no deformar al achicar o agrandar una imagen*/
-  /*  top: 0;
-  left: 0;*/
-  /*border-radius: 15px;*/
-  /*margin: 0 auto;*/
-  /* box-shadow: 0px 20px 16px -10px #fff; */
-  /* background: #000; */
+.carousel {
+  position: relative;
 }
+
+.carousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .carousel .button-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+} */
+
+.btn {
+  width: 50px;
+  height: 58px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1px;
+  border-radius: 5px;
+}
+
+/*este lo colocamos para que despues de apretar quede a este color el fondo ya que sin este quedaria en verde todo el rato.*/
+.btn:hover {
+  background-color: #0056b3;
+}
+/*este lo ocupamos para que al dar click en el boton cambie el tamaño y el color colo al dar click*/
+.btn:active {
+  width: 45px;
+  height: 50px;
+  background-color: #26a69a;
+}  
+
+.btn-siguiente {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Colocar el botón de siguiente a la derecha */
+  transform: translateY(-50%);
+}
+
+.btn-anterior {
+  position: absolute;
+  top: 50%;
+  left: 20px; /* Colocar el botón de anterior a la izquierda */
+  transform: translateY(-50%);
+}
+
+.material-icons {
+  vertical-align: middle; /* Asegura que el icono esté centrado */
+}
+
 
 /*este efecto lo ocupamos para mostrar el titulo de la imagen al pasar el mause por la imagen, a la letra le colocamos (opacity 0)*/
 
@@ -606,6 +635,7 @@ h4 {
   box-shadow: none;
   /* background: none; */
 }
+
  
 .footer {
   width: 100%; /*ancho*/
