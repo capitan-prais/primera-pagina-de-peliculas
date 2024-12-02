@@ -1,4 +1,4 @@
-// aqui modificaremos el buscador 
+// aqui modificaremos el buscador //////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener el campo de búsqueda y los elementos de título de película
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// <<aqui modificamos el carrusel>>
+// aqui modificamos el carrusel //////////////////////////////////////////////////////
 
 document.addEventListener('DOMContentLoaded', () => {
     // Seleccionar todos los elementos con la clase '.carousel'
@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//activa o cierra el menu lateral al achicar la pagina
+// activa o cierra el menu lateral al achicar la pagina /////////////////////////
+
 	const menu = document.querySelector('.menu');
 	const btn = document.querySelector('.menu-btn');
 
@@ -93,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 	menu.classList.toggle('pause')
 		// }
 		);
+
+// le da sonido a los botones   ////////////////////////////////////////////////////     
 
 type="text/javascript">
 	$(document).ready(function(){
@@ -129,4 +132,12 @@ type="text/javascript">
 		});
 	});
 
-        
+// que modificamos !-- boton para subir hacia arriba --> /////////////////////////////////
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+            document.querySelector('.arriba').classList.add('show');
+        } else {
+            document.querySelector('.arriba').classList.remove('show');
+        }
+    }

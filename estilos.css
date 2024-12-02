@@ -601,7 +601,7 @@ h4 {
 
 }
 
-.n{
+/* .n{
   background: #000;
 }
 .n img{
@@ -614,7 +614,6 @@ h4 {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  /* background: #000; */
 }
 
 
@@ -633,9 +632,32 @@ h4 {
   width: 65px;
   height: 65px;
   box-shadow: none;
-  /* background: none; */
+} */
+
+
+
+
+.arriba {
+  display: none; /* Inicialmente no se muestra */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
+.arriba.show {
+  display: block; /* Aparece cuando se hace scroll hacia abajo */
+}
+
+.arriba img {
+  width: 55px; /* Ajusta el tamaño según sea necesario */
+}
+
+.arriba:active{
+  width: 50px;
+}
  
 .footer {
   width: 100%; /*ancho*/
