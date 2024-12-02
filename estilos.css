@@ -440,16 +440,24 @@ h4 {
   /* margin: center;
   padding: center; */
   /* box-shadow: 0px 10px 16px -10px #fff; */
-
+  transition: none; /* Desactiva transiciones no deseadas */
   /* background: #000; */
 }
 
+.carousel-item img:hover {
+  filter: none; /* Evita filtros que puedan alterar el color */
+}
+
+/*agrandar la imagen y que se posicione en el centro*/
 .carousel .carousel-item img:active{
- transform: scale(1.1); /*agrandar la imagen y que se posicione en el centro*/
+ transform: scale(1.1); 
 }
 
 .carousel {
   position: relative;
+  scroll-behavior: smooth;
+  display: flex;
+  overflow-x: auto;
 }
 
 .carousel .carousel-item {
@@ -458,22 +466,6 @@ h4 {
   align-items: center;
 }
 
-/* .carousel .button-nav {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-.prev {
-  left: 10px;
-}
-.next {
-  right: 10px;
-} */
 
 .btn {
   width: 50px;
@@ -601,41 +593,7 @@ h4 {
 
 }
 
-/* .n{
-  background: #000;
-}
-.n img{
-  width: 65px;
-  height: 65px;
-  position:fixed;
-  bottom:0;
-  right:0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-}
-
-
-
-.n img:hover{
-  width: 70px;
-  height: 70px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: #000;
-  box-shadow: 0px 1px 24px 10px rgba(0,0,0,1);
-}
-
-.n img:active{
-  width: 65px;
-  height: 65px;
-  box-shadow: none;
-} */
-
-
-
+/* aqui modificamos el boton que nos dirige hacia arriba */
 
 .arriba {
   display: none; /* Inicialmente no se muestra */

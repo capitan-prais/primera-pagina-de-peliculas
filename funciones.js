@@ -1,31 +1,46 @@
-// aqui modificaremos el buscador //////////////////////////////////////////////////
+// aqui modificamos el buscador ////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Obtener el campo de búsqueda y los elementos de título de película
-    const searchInput = document.getElementById('searchInput');
-    const movieTitles = document.querySelectorAll('.titulodepelicula'); // Todos los títulos de las películas
-    
-    // Evento que se activa cuando el usuario escribe en el buscador
-    searchInput.addEventListener('input', function() {
-        // Obtener el valor del campo de búsqueda, lo pasamos a minúsculas
-        const searchText = searchInput.value.toLowerCase();
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+    // Detectar cuando el usuario presiona "Enter"
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Prevenir el comportamiento por defecto de submit del formulario
         
-        // Recorrer todos los títulos de las películas
-        movieTitles.forEach(function(title) {
-            // Obtener el texto de cada título
-            const titleText = title.textContent.toLowerCase();
-            
-            // Comprobar si el título contiene el texto buscado
-            if (titleText.includes(searchText)) {
-                // Si el título contiene el texto buscado, mostrarlo
-                title.parentElement.style.display = 'block';
-            } else {
-                // Si no contiene el texto, ocultarlo
-                title.parentElement.style.display = 'none';
+        let searchQuery = this.value.toLowerCase();  // Captura el texto ingresado en el buscador y lo pasa a minúsculas
+        let carousels = document.querySelectorAll('.carousel');  // Selecciona todos los carousels
+        let found = false;  // Variable para saber si se encontró alguna película
+
+        // Recorre todos los carousels
+        carousels.forEach(function(carousel) {
+            let peliculas = carousel.querySelectorAll('.carousel-item');  // Obtiene todos los elementos de las películas dentro del carousel
+            let peliculaEncontrada = null;
+
+            peliculas.forEach(function(item) {
+                let titulo = item.querySelector('.titulodepelicula').textContent.toLowerCase();  // Obtiene el título de la película en minúsculas
+                
+                if (titulo.includes(searchQuery)) {
+                    peliculaEncontrada = item;  // Si se encuentra la película, se guarda el ítem
+                }
+            });
+
+            if (peliculaEncontrada) {
+                found = true;  // Marca que se encontró una película
+                carousel.scrollIntoView({ behavior: 'smooth', block: 'center' });  // Desplaza el carousel al centro
+                peliculaEncontrada.scrollIntoView({ behavior: 'smooth', block: 'center' });  // Centra la película encontrada dentro del carousel
+                peliculaEncontrada.style.opacity = '1';  // Asegura que la película esté visible
             }
         });
-    });
+
+        if (!found) {
+            alert('No se encontró ninguna película con ese nombre');  // Si no se encontró ninguna película, muestra un mensaje
+        }
+    }
 });
+
+
+
+
+
+
 
 // aqui modificamos el carrusel //////////////////////////////////////////////////////
 
@@ -35,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Configuración común para todos los carouseles
     const opcionesCarousel = {
-        duration: 280,         // Duración de la animación
+        duration: 200,         // Duración de la animación
         dist: 1,               // Distancia entre los elementos
-        shift: 10,             // Desplazamiento de los elementos
-        padding: 300,          // Espaciado del contenido
+        shift: 100,             // velocidad de Desplazamiento de los elementos
+        padding: 10,          // Espaciado del contenido
         numVisible: 20,        // Número de elementos visibles
         indicators: true,      // Mostrar indicadores
-        noWrap: false          // Hacer que el carousel se repita
+        noWrap: true          // Hacer que el carousel se repita
     };
 
     // Inicializar los carouseles con las opciones definidas

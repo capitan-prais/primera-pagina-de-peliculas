@@ -46,12 +46,12 @@
 			<h4>STRANG</h4>
 		</div>
 		<div class="ContenedorBuscador">
-			<form class="buscar">
-				<input type="text" id="searchInput" placeholder="Buscar" color="#000"required>
+			<form class="buscar" id="buscarForm">
+				<input type="text" id="searchInput" placeholder="Buscar" color="#000" required>
 				<div class="btn">	
-					<img src="imagenes/buscar.png" alt="">
+					<img src="imagenes/buscar.png" alt="buscar">
 				</div>
-			</>	
+			<form/>	
 		</div>
 		<ul class="menu">
 			<li><a href="#Estrenos" class="menu-i">Estrenos</a></li>	
@@ -77,12 +77,12 @@
 	<div class="todo">
 		<h1 class="titulo">Estrenos</h1>
 		<div class="carousel-container">
-					<div class="carousel">
+					<div id="carousel" class="carousel">
 						<div class="carousel-item">
 							<p class="titulodepelicula">Black Adam</p>
-							<img class="imagenpeli" src="imagenes/black-adam.png" alt="Imagen 1" data-video="video1.mp4">
+							<img class="imagenpeli"  src="imagenes/black-adam.png" alt="Imagen 1" data-video="video1.mp4">
 						</div>
-						<div class="carousel-item">
+						<div class="carousel-item" id="imagen2">
 							<p class="titulodepelicula">Thor: amor y trueno</p>
 							<img class="imagenpeli" src="imagenes/thor.png" alt="Imagen 2">
 						</div>
@@ -243,7 +243,7 @@
 							<img class="imagenpeli" src="imagenes/Raya.png" alt="">
 						</div>
 						<div class="carousel-item">
-							<p class="titulodepelicula">Vivo</p>
+							<p class="titulodepelicula">vivo</p>
 							<img class="imagenpeli" src="imagenes/Vivo.png" alt="">
 						</div>
 					</div>
